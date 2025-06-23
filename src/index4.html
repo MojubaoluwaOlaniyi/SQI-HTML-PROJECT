@@ -1,0 +1,511 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=keyboard language" />
+</head>
+<body> 
+  <header class="antialiased  sticky top-0">
+  <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800 ">
+      <div class="flex   justify-between items-center ">
+          <div class="flex justify-center items-center  z-0   ">
+              
+                            <!-- Toggle Button -->
+                <button id="toggleSidebarBtn"
+                    aria-expanded="true"
+                    aria-controls="logo-sidebar"
+                    class="p-2 mr-2 text-gray-600 rounded-lg cursor-pointer hover:text-gray-900 hover:bg-gray-100 focus:bg-gray-100 dark:focus:bg-gray-700 focus:ring-2 focus:ring-gray-100 dark:focus:ring-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                    <svg class="w-[18px] h-[18px]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                    <span class="sr-only">Toggle sidebar</span>
+                </button>  
+                <div class="w-[100px]">
+                
+                    <a href="index.html">
+                        <img src="./image/logo.png" class="h-[50px] w-[90px] max-w-full " alt="">
+                    </a>
+                 
+             </div> 
+              <div class="flex    ml-40 bg-white w-auto justify-center ">
+                <form action="#" method="GET" class="  lg:block lg:pl-2 max-sm:hidden">
+                <label for="topbar-search" class="sr-only">Search</label>
+                <div class=" relative   mt-1  w-lg  ">
+                  <div class="flex    flex-nowrap justify-end  absolute  inset-y-0 left-105 items-center pl-3 pointer-events-none rounded-4xl"> 
+                  </div>
+                  
+                  <input type="text" name="email" id="topbar-search" class="bg-gray-50 border   border-gray-300 text-gray-900 sm:text-sm rounded-3xl focus:ring-primary-500 focus:border-primary-500 block  w-full pl-9 p-2.5   max-w-md:hidden  " placeholder="Search">
+                       
+                </div>
+                
+              </form>
+              <button>
+                  <div class="m border-2 h-9 w-9 flex">
+                        <svg class="w-4 h-4  text-gray-500 dark:text-gray-400 z-1  relative top-1.5 left-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20"> <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/> </svg> 
+                     </div>
+              </button>
+
+                <button> 
+                        <div class="bg-[#f9fafb] w-8.5 h-8.5   rounded-full  max-md:hidden"> 
+                          <svg class="w-6 h-6 text-black relative left-0.5 top-1 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9v3a5.006 5.006 0 0 1-5 5h-4a5.006 5.006 0 0 1-5-5V9m7 9v3m-3 0h6M11 3h2a3 3 0 0 1 3 3v5a3 3 0 0 1-3 3h-2a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3Z"/>
+                        </svg>
+                      </div>
+                    </button>
+            </div>
+              
+          </div>
+          <div class="flex items-center  ">
+           <div class="relative inline-block group">
+                <!-- Button -->
+                <button type="button" class="flex items-center justify-center bg-gray-200 text-black border-black focus:ring-2 focus:ring-primary-300 font-medium rounded-full text-xs px-3 py-1.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-80">
+                    <svg aria-hidden="true" class="mr-1 -ml-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path>
+                    </svg>
+                    Create
+                </button>
+                <div class="absolute w-[180px] bg-white  shadow-2xs shadow-black py-4 rounded-md px-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-200 mt-2 z-50">
+                    <ul>
+                            <li> 
+                                <a href="#" class="text-sm hover:bg-gray-100 px-2 py-1 rounded flex ">
+                                <svg class="w-6 h-6 text-gray-800  dark:text-white pr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 6H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1Zm7 11-6-2V9l6-2v10Z"/>
+                                </svg>
+
+                            Upload video</a>
+                            </li>
+                            <li>
+                                <a href="#" class="  hover:bg-gray-100 px-2 py-1 rounded flex">
+                                    <svg class="w-6 h-6 pr-2 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                     <path fill-rule="evenodd" d="M14.516 6.743c-.41-.368-.443-1-.077-1.41a.99.99 0 0 1 1.405-.078l5.487 4.948.007.006A2.047 2.047 0 0 1 22 11.721a2.06 2.06 0 0 1-.662 1.51l-5.584 5.09a.99.99 0 0 1-1.404-.07 1.003 1.003 0 0 1 .068-1.412l5.578-5.082a.05.05 0 0 0 .015-.036.051.051 0 0 0-.015-.036l-5.48-4.942Zm-6.543 9.199v-.42a4.168 4.168 0 0 0-2.715 2.415c-.154.382-.44.695-.806.88a1.683 1.683 0 0 1-2.167-.571 1.705 1.705 0 0 1-.279-1.092V15.88c0-3.77 2.526-7.039 5.967-7.573V7.57a1.957 1.957 0 0 1 .993-1.838 1.931 1.931 0 0 1 2.153.184l5.08 4.248a.646.646 0 0 1 .012.011l.011.01a2.098 2.098 0 0 1 .703 1.57 2.108 2.108 0 0 1-.726 1.59l-5.08 4.25a1.933 1.933 0 0 1-2.929-.614 1.957 1.957 0 0 1-.217-1.04Z" clip-rule="evenodd"/>
+                    </svg>
+
+Go live</a>
+                            </li>
+                            <li>
+                                <a href="#" class="  hover:bg-gray-100 px-2 py-1 rounded flex">
+                                    <svg class="w-6 h-6 text-gray-800 dark:text-white pr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                    <path fill-rule="evenodd" d="M9 7V2.221a2 2 0 0 0-.5.365L4.586 6.5a2 2 0 0 0-.365.5H9Zm2 0V2h7a2 2 0 0 1 2 2v6.41A7.5 7.5 0 1 0 10.5 22H6a2 2 0 0 1-2-2V9h5a2 2 0 0 0 2-2Z" clip-rule="evenodd"/>
+                                    <path fill-rule="evenodd" d="M9 16a6 6 0 1 1 12 0 6 6 0 0 1-12 0Zm6-3a1 1 0 0 1 1 1v1h1a1 1 0 1 1 0 2h-1v1a1 1 0 1 1-2 0v-1h-1a1 1 0 1 1 0-2h1v-1a1 1 0 0 1 1-1Z" clip-rule="evenodd"/>
+                                    </svg>
+                                    Create Post</a>
+                            </li>
+                    </ul>
+                   
+                    
+                    
+                </div>                
+
+            </div>
+
+              <button id="toggleSidebarMobileSearch" type="button" class="p-2 text-gray-500 rounded-lg   hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                  <span class="sr-only">Search</span>  
+              </button>  
+              <!-- Notifications -->
+              <button type="button" data-dropdown-toggle="notification-dropdown" class="p-2 mr-1 text-gray-500 rounded-lg hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600">
+                  <span class="sr-only">View notifications</span>
+                  <!-- Bell icon -->
+                  <svg class="w-7 h-7 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 14 20"><path d="M12.133 10.632v-1.8A5.406 5.406 0 0 0 7.979 3.57.946.946 0 0 0 8 3.464V1.1a1 1 0 0 0-2 0v2.364a.946.946 0 0 0 .021.106 5.406 5.406 0 0 0-4.154 5.262v1.8C1.867 13.018 0 13.614 0 14.807 0 15.4 0 16 .538 16h12.924C14 16 14 15.4 14 14.807c0-1.193-1.867-1.789-1.867-4.175ZM3.823 17a3.453 3.453 0 0 0 6.354 0H3.823Z"/></svg>
+              </button>
+              <!-- Dropdown menu -->
+              <div class="hidden overflow-hidden   z-50 my-4 max-w-sm text-base list-none bg-white rounded divide-y divide-gray-100 shadow-lg dark:divide-gray-600 dark:bg-gray-700" id="notification-dropdown">
+                  <div class="flex  w-[100%] py-2 px-2text-base font-medium text-left text-gray-700 bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                      Notifications
+                      <svg class="w-[39px] h-[39px] relative left-55 text-gray-800 dark:text-white  " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                          <path fill-rule="evenodd" d="M17 10v1.126c.367.095.714.24 1.032.428l.796-.797 1.415 1.415-.797.796c.188.318.333.665.428 1.032H21v2h-1.126c-.095.367-.24.714-.428 1.032l.797.796-1.415 1.415-.796-.797a3.979 3.979 0 0 1-1.032.428V20h-2v-1.126a3.977 3.977 0 0 1-1.032-.428l-.796.797-1.415-1.415.797-.796A3.975 3.975 0 0 1 12.126 16H11v-2h1.126c.095-.367.24-.714.428-1.032l-.797-.796 1.415-1.415.796.797A3.977 3.977 0 0 1 15 11.126V10h2Zm.406 3.578.016.016c.354.358.574.85.578 1.392v.028a2 2 0 0 1-3.409 1.406l-.01-.012a2 2 0 0 1 2.826-2.83ZM5 8a4 4 0 1 1 7.938.703 7.029 7.029 0 0 0-3.235 3.235A4 4 0 0 1 5 8Zm4.29 5H7a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h6.101A6.979 6.979 0 0 1 9 15c0-.695.101-1.366.29-2Z" clip-rule="evenodd"/>
+                      </svg>
+                  </div>
+                  <div class="">
+                  <a href="#" class="flex py-3 px-4 border-b hover:bg-gray-100 dark:hover:bg-gray-600 dark:border-gray-600 overflow-y-scroll">
+                      <div class="flex-shrink-0">
+                      <img class="w-11 h-11 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png" alt="Bonnie Green avatar">
+                      <div class="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 rounded-full border border-white bg-primary-700 dark:border-gray-700">
+                          <svg class="w-2 h-2 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 18"><path d="M15.977.783A1 1 0 0 0 15 0H3a1 1 0 0 0-.977.783L.2 9h4.239a2.99 2.99 0 0 1 2.742 1.8 1.977 1.977 0 0 0 3.638 0A2.99 2.99 0 0 1 13.561 9H17.8L15.977.783ZM6 2h6a1 1 0 1 1 0 2H6a1 1 0 0 1 0-2Zm7 5H5a1 1 0 0 1 0-2h8a1 1 0 1 1 0 2Z"/><path d="M1 18h16a1 1 0 0 0 1-1v-6h-4.439a.99.99 0 0 0-.908.6 3.978 3.978 0 0 1-7.306 0 .99.99 0 0 0-.908-.6H0v6a1 1 0 0 0 1 1Z"/></svg>
+                      </div>
+                      </div>
+                      <div class="pl-3 w-full">
+                          <div class="text-gray-500 font-normal text-sm mb-1.5 dark:text-gray-400">New message from <span class="font-semibold text-gray-900 dark:text-white">Bonnie Green</span>: "Hey, what's up? All set for the presentation?"</div>
+                          <div class="text-xs font-medium text-primary-700 dark:text-primary-400">a few moments ago</div>
+                      </div>
+                  </a>
+                  <a href="#" class="flex py-3 px-4 border-b hover:bg-gray-100 dark:hover:bg-gray-600 dark:border-gray-600">
+                      <div class="flex-shrink-0">
+                      <img class="w-11 h-11 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png" alt="Jese Leos avatar">
+                      <div class="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-gray-900 rounded-full border border-white dark:border-gray-700">
+                          <svg class="w-2 h-2 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18"><path d="M6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Zm11-3h-2V5a1 1 0 0 0-2 0v2h-2a1 1 0 1 0 0 2h2v2a1 1 0 0 0 2 0V9h2a1 1 0 1 0 0-2Z"/></svg>
+                      </div>
+                      </div>
+                      <div class="pl-3 w-full">
+                          <div class="text-gray-500 font-normal text-sm mb-1.5 dark:text-gray-400"><span class="font-semibold text-gray-900 dark:text-white">Jese leos</span> and <span class="font-medium text-gray-900 dark:text-white">5 others</span> started following you.</div>
+                          <div class="text-xs font-medium text-primary-700 dark:text-primary-400">10 minutes ago</div>
+                      </div>
+                  </a>
+                  <a href="#" class="flex py-3 px-4 border-b hover:bg-gray-100 dark:hover:bg-gray-600 dark:border-gray-600">
+                      <div class="flex-shrink-0">
+                      <img class="w-11 h-11 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/joseph-mcfall.png" alt="Joseph McFall avatar">
+                      <div class="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-red-600 rounded-full border border-white dark:border-gray-700">
+                        <svg class="w-2 h-2 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18"> <path d="M17.947 2.053a5.209 5.209 0 0 0-3.793-1.53A6.414 6.414 0 0 0 10 2.311 6.482 6.482 0 0 0 5.824.5a5.2 5.2 0 0 0-3.8 1.521c-1.915 1.916-2.315 5.392.625 8.333l7 7a.5.5 0 0 0 .708 0l7-7a6.6 6.6 0 0 0 2.123-4.508 5.179 5.179 0 0 0-1.533-3.793Z"/> </svg>                      
+                      </div>
+                      </div>
+                      <div class="pl-3 w-full">
+                          <div class="text-gray-500 font-normal text-sm mb-1.5 dark:text-gray-400"><span class="font-semibold text-gray-900 dark:text-white">Joseph Mcfall</span> and <span class="font-medium text-gray-900 dark:text-white">141 others</span> love your story. See it and view more stories.</div>
+                          <div class="text-xs font-medium text-primary-700 dark:text-primary-400">44 minutes ago</div>
+                      </div>
+                  </a>
+                  <a href="#" class="flex py-3 px-4 border-b hover:bg-gray-100 dark:hover:bg-gray-600 dark:border-gray-600">
+                      <div class="flex-shrink-0">
+                      <img class="w-11 h-11 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/roberta-casas.png" alt="Roberta Casas image">
+                      <div class="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-green-400 rounded-full border border-white dark:border-gray-700">
+                          <svg class="w-2 h-2 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18"><path d="M18 0H2a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h2v4a1 1 0 0 0 1.707.707L10.414 13H18a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5 4h2a1 1 0 1 1 0 2h-2a1 1 0 1 1 0-2ZM5 4h5a1 1 0 1 1 0 2H5a1 1 0 0 1 0-2Zm2 5H5a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2Zm9 0h-6a1 1 0 0 1 0-2h6a1 1 0 1 1 0 2Z"/></svg>
+                      </div>
+                      </div>
+                      <div class="pl-3 w-full">
+                          <div class="text-gray-500 font-normal text-sm mb-1.5 dark:text-gray-400"><span class="font-semibold text-gray-900 dark:text-white">Leslie Livingston</span> mentioned you in a comment: <span class="font-medium text-primary-700 dark:text-primary-500">@bonnie.green</span> what do you say?</div>
+                          <div class="text-xs font-medium text-primary-700 dark:text-primary-400">1 hour ago</div>
+                      </div>
+                  </a>
+                  <a href="#" class="flex py-3 px-4 hover:bg-gray-100 dark:hover:bg-gray-600">
+                      <div class="flex-shrink-0">
+                      <img class="w-11 h-11 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/robert-brown.png" alt="Robert image">
+                      <div class="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-purple-500 rounded-full border border-white dark:border-gray-700">
+                          <svg class="w-2 h-2 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 14"><path d="M11 0H2a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm8.585 1.189a.994.994 0 0 0-.9-.138l-2.965.983a1 1 0 0 0-.685.949v8a1 1 0 0 0 .675.946l2.965 1.02a1.013 1.013 0 0 0 1.032-.242A1 1 0 0 0 20 12V2a1 1 0 0 0-.415-.811Z"/></svg>
+                      </div>
+                      </div>
+                      <div class="pl-3 w-full">
+                          <div class="text-gray-500 font-normal text-sm mb-1.5 dark:text-gray-400"><span class="font-semibold text-gray-900 dark:text-white">Robert Brown</span> posted a new video: Glassmorphism - learn how to implement the new design trend.</div>
+                          <div class="text-xs font-medium text-primary-700 dark:text-primary-400">3 hours ago</div>
+                      </div>
+                  </a>
+                  </div>
+                  <a href="#" class="block py-2 text-base font-medium text-center text-gray-900 bg-gray-50 hover:bg-gray-100 dark:bg-gray-700 dark:text-white dark:hover:underline">
+                      <div class="inline-flex items-center ">
+                      <svg aria-hidden="true" class="mr-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"></path></svg>
+                      View all
+                      </div>
+                  </a>
+              </div>
+            <div class="  "> 
+                <button type="button" class="  w-7 h-7 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="" data-dropdown-toggle="dropdown">
+                  <span class="sr-only">Open user menu</span>
+                  <img class="w-8 h-8 rounded-full" src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" alt="user photo">
+                </button>
+            </div>
+             
+              <!-- Dropdown menu -->
+              <div class="hidden w-[300px] z-50 my-4 text-base list-none bg-white rounded-2xl divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600" id="dropdown">
+                  <div class="py-3 px-4">
+                      <span class="block text-sm font-semibold text-gray-900 dark:text-white">Neil sims</span>
+                      <span class="block text-sm text-gray-500 truncate dark:text-gray-400">name@gmail.com</span>
+                  </div>
+                  <ul class="py-1 text-gray-500 dark:text-gray-400" aria-labelledby="dropdown">
+                         <li>
+                          <a href="#" class="flex items-center py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                            <svg class="w-8 h-8 pr-2 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                               <path fill-rule="evenodd" d="M12.037 21.998a10.313 10.313 0 0 1-7.168-3.049 9.888 9.888 0 0 1-2.868-7.118 9.947 9.947 0 0 1 3.064-6.949A10.37 10.37 0 0 1 12.212 2h.176a9.935 9.935 0 0 1 6.614 2.564L16.457 6.88a6.187 6.187 0 0 0-4.131-1.566 6.9 6.9 0 0 0-4.794 1.913 6.618 6.618 0 0 0-2.045 4.657 6.608 6.608 0 0 0 1.882 4.723 6.891 6.891 0 0 0 4.725 2.07h.143c1.41.072 2.8-.354 3.917-1.2a5.77 5.77 0 0 0 2.172-3.41l.043-.117H12.22v-3.41h9.678c.075.617.109 1.238.1 1.859-.099 5.741-4.017 9.6-9.746 9.6l-.215-.002Z" clip-rule="evenodd"/>
+                            </svg>
+
+                             Google account
+                          </a>
+                      </li>
+                        <li>
+                          <a href="#" class="flex items-center py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                           <svg class="w-8 h-8 pr-2 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12h4M4 18v-1a3 3 0 0 1 3-3h4a3 3 0 0 1 3 3v1a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1Zm8-10a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+                          </svg>
+
+                            Swith account
+                          </a>
+                      </li>
+                        <li>
+                          <a href="#" class="flex items-center py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                         <svg class="w-8 h-8 pr-2 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12H4m12 0-4 4m4-4-4-4m3-4h2a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3h-2"/>
+                          </svg>
+
+                             Sign Out
+                          </a>
+                      </li>
+                  </ul>
+                  <ul class="py-1 text-gray-500 dark:text-gray-400" aria-labelledby="dropdown">
+                      <li>
+                          <a href="#" class="flex items-center py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                        <svg class="w-8 h-8 pr-2 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 6H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1Zm7 11-6-2V9l6-2v10Z"/>
+                        </svg>
+
+
+                              Youtube Studio
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#" class="flex items-center py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                        <svg class="w-8 h-8 pr-2 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 17.345a4.76 4.76 0 0 0 2.558 1.618c2.274.589 4.512-.446 4.999-2.31.487-1.866-1.273-3.9-3.546-4.49-2.273-.59-4.034-2.623-3.547-4.488.486-1.865 2.724-2.899 4.998-2.31.982.236 1.87.793 2.538 1.592m-3.879 12.171V21m0-18v2.2"/>
+                        </svg>
+
+                        Purchases and Memberships
+                          </a>
+                      </li>
+                      
+                  </ul>
+                  <ul class="py-1 text-gray-500 dark:text-gray-400" aria-labelledby="dropdown">
+                      <li>
+                          <a href="#" class="flex items-center py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                        <svg class="w-6 h-6 pr-2 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.7141 15h4.268c.4043 0 .732-.3838.732-.8571V3.85714c0-.47338-.3277-.85714-.732-.85714H6.71411c-.55228 0-1 .44772-1 1v4m10.99999 7v-3h3v3h-3Zm-3 6H6.71411c-.55228 0-1-.4477-1-1 0-1.6569 1.34315-3 3-3h2.99999c1.6569 0 3 1.3431 3 3 0 .5523-.4477 1-1 1Zm-1-9.5c0 1.3807-1.1193 2.5-2.5 2.5s-2.49999-1.1193-2.49999-2.5S8.8334 9 10.2141 9s2.5 1.1193 2.5 2.5Z"/>
+                        </svg>
+
+
+                       Your data in Youtube
+                          </a>
+                      </li>
+                     <li>
+                           <a href="#" class="flex items-center py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                       <svg class="w-6 h-6 pr-2 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21a9 9 0 0 1-.5-17.986V3c-.354.966-.5 1.911-.5 3a9 9 0 0 0 9 9c.239 0 .254.018.488 0A9.004 9.004 0 0 1 12 21Z"/>
+                      </svg>
+
+                              <span class="flex items-center">
+                                   
+                                 Appearance: Device Theme
+                              </span>
+                              <svg class="w-4 h-4 text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/></svg>
+                          </a>
+                      </li>
+                        <li>
+                           <a href="#" class="flex items-center py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                      <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m13 19 3.5-9 3.5 9m-6.125-2h5.25M3 7h7m0 0h2m-2 0c0 1.63-.793 3.926-2.239 5.655M7.5 6.818V5m.261 7.655C6.79 13.82 5.521 14.725 4 15m3.761-2.345L5 10m2.761 2.655L10.2 15"/>
+                      </svg> 
+                      <span class="flex items-center">
+                                   
+                                Language: English
+                              </span>
+                              <svg class="w-4 h-4 pl-2 text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/></svg>
+                          </a>
+                      </li>
+                       <li>
+                           <a href="#" class="flex items-center py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M3 4a1 1 0 0 0-.822 1.57L6.632 12l-4.454 6.43A1 1 0 0 0 3 20h13.153a1 1 0 0 0 .822-.43l4.847-7a1 1 0 0 0 0-1.14l-4.847-7a1 1 0 0 0-.822-.43H3Z" clip-rule="evenodd"/>
+                    </svg>
+
+                      <span class="flex items-center">
+                                Restricted Mode: Off
+                              </span>
+                              <svg class="w-4 h-4 pl-2 text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/></svg>
+                          </a>
+                      </li>
+                       <li>
+                           <a href="#" class="flex items-center py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                   <svg class="w-6 h-6 pr-2 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.8 13.938h-.011a7 7 0 1 0-11.464.144h-.016l.14.171c.1.127.2.251.3.371L12 21l5.13-6.248c.194-.209.374-.429.54-.659l.13-.155Z"/>
+                  </svg>
+
+
+                      <span class="flex items-center">
+                             Location: Nigeria
+                              </span>
+                              <svg class="w-4 h-4 pl-2 text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/></svg>
+                          </a>
+                      </li>
+                         <li>
+                           <a href="#" class="flex items-center py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                  <svg class="w-6 h-6 pr-2 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                      <path stroke="currentColor" stroke-linecap="square" stroke-width="2" d="M8 15h7.01v.01H15L8 15Z"/>
+                     <path stroke="currentColor" stroke-linecap="square" stroke-width="2" d="M20 6H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1Z"/>
+                    <path stroke="currentColor" stroke-linecap="square" stroke-width="2" d="M6 9h.01v.01H6V9Zm0 3h.01v.01H6V12Zm0 3h.01v.01H6V15Zm3-6h.01v.01H9V9Zm0 3h.01v.01H9V12Zm3-3h.01v.01H12V9Zm0 3h.01v.01H12V12Zm3 0h.01v.01H15V12Zm3 0h.01v.01H18V12Zm0 3h.01v.01H18V15Zm-3-6h.01v.01H15V9Zm3 0h.01v.01H18V9Z"/>
+</svg>
+
+
+
+                      <span class="flex items-center">
+                             Keyboard: Shortcuts
+                              </span>
+                              <svg class="w-4 h-4 pl-2 text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/></svg>
+                          </a>
+                      </li>
+                  </ul>
+                  <ul class="py-1 text-gray-500 dark:text-gray-400" aria-labelledby="dropdown">
+                        <li>
+                          <a href="index4.html" class="flex items-center py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                             <svg class="w-8 h-8 pr-2 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                 <path fill-rule="evenodd" d="M17 10v1.126c.367.095.714.24 1.032.428l.796-.797 1.415 1.415-.797.796c.188.318.333.665.428 1.032H21v2h-1.126c-.095.367-.24.714-.428 1.032l.797.796-1.415 1.415-.796-.797a3.979 3.979 0 0 1-1.032.428V20h-2v-1.126a3.977 3.977 0 0 1-1.032-.428l-.796.797-1.415-1.415.797-.796A3.975 3.975 0 0 1 12.126 16H11v-2h1.126c.095-.367.24-.714.428-1.032l-.797-.796 1.415-1.415.796.797A3.977 3.977 0 0 1 15 11.126V10h2Zm.406 3.578.016.016c.354.358.574.85.578 1.392v.028a2 2 0 0 1-3.409 1.406l-.01-.012a2 2 0 0 1 2.826-2.83ZM5 8a4 4 0 1 1 7.938.703 7.029 7.029 0 0 0-3.235 3.235A4 4 0 0 1 5 8Zm4.29 5H7a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h6.101A6.979 6.979 0 0 1 9 15c0-.695.101-1.366.29-2Z" clip-rule="evenodd"/>
+                              </svg>
+
+                             Settings
+                          </a>
+                      </li>
+                       
+                  </ul>
+                  <ul class="py-1 text-gray-500 dark:text-gray-400" aria-labelledby="dropdown">
+                      <li>
+                          <a href="#" class="flex items-center py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                            <svg class="w-8 h-8 pr-2 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.529 9.988a2.502 2.502 0 1 1 5 .191A2.441 2.441 0 0 1 12 12.582V14m-.01 3.008H12M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+</svg>
+
+
+                            Help
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#" class="flex items-center py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                           <svg class="w-8 h-8 pr-2 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                              <path fill-rule="evenodd" d="M3 5.983C3 4.888 3.895 4 5 4h14c1.105 0 2 .888 2 1.983v8.923a1.992 1.992 0 0 1-2 1.983h-6.6l-2.867 2.7c-.955.899-2.533.228-2.533-1.08v-1.62H5c-1.105 0-2-.888-2-1.983V5.983Zm5.706 3.809a1 1 0 1 0-1.412 1.417 1 1 0 1 0 1.412-1.417Zm2.585.002a1 1 0 1 1 .003 1.414 1 1 0 0 1-.003-1.414Zm5.415-.002a1 1 0 1 0-1.412 1.417 1 1 0 1 0 1.412-1.417Z" clip-rule="evenodd"/>
+                          </svg> 
+                              Send Feedback
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+       
+  </nav>
+</header>
+
+<main >
+    <div class="w-full h-[100vh]">
+     
+        <div class="w-[15%] h-[92vh] fixed max-lg:hidden  px-1">
+                <div class="mb-5  rounded-lg py-2 px-2  hover:bg-gray-100 w-[100%] ">
+                    <a href="" class="text-xs text-black text-center">
+                   
+                    <span class="ml-1 text-xl text-gray-600">Settings</span></a>
+                </div> 
+                <div class="   rounded-lg py-2 px-2  hover:bg-gray-100 w-[100%]  ">
+                    <a href="index4.html" class="text-xs text-black text-center">
+                   
+                    <span class="ml-1 text-sm  font-bold text-black">Account</span></a>
+                </div> 
+                <div class="   rounded-lg py-2 px-2  hover:bg-gray-100 w-[100%]  ">
+                    <a href="" class="text-xs text-black text-center">
+                   
+                    <span class="ml-1 text-sm   text-black">Notifications</span></a>
+                </div> 
+                <div class="   rounded-lg py-2 px-2  hover:bg-gray-100 w-[100%]  ">
+                    <a href="" class="text-xs text-black text-center">
+                   
+                    <span class="ml-1 text-sm   text-black">Playback and Performance</span></a>
+                </div> 
+                <div class="   rounded-lg py-2 px-2  hover:bg-gray-100 w-[100%]  ">
+                    <a href="index5.html" class="text-xs text-black text-center">
+                   
+                    <span class="ml-1 text-sm  text-black">Downloads</span></a>
+                </div> 
+                <div class="   rounded-lg py-2 px-2  hover:bg-gray-100 w-[100%]  ">
+                    <a href="" class="text-xs text-black text-center">
+                   
+                    <span class="ml-1 text-sm   text-black">Privacy</span></a>
+                </div> 
+                <div class="   rounded-lg py-2 px-2  hover:bg-gray-100 w-[100%]  ">
+                    <a href="" class="text-xs text-black text-center">
+                   
+                    <span class="ml-1 text-sm   text-black">Connected apps</span></a>
+                </div> 
+                <div class="   rounded-lg py-2 px-2  hover:bg-gray-100 w-[100%]  ">
+                    <a href="" class="text-xs text-black text-center">
+                   
+                    <span class="ml-1 text-sm   text-black">Purchases and Memberships</span></a>
+                </div> 
+                <div class="   rounded-lg py-2 px-2  hover:bg-gray-100 w-[100%]  ">
+                    <a href="" class="text-xs text-black text-center">
+                   
+                    <span class="ml-1 text-sm  text-black">Billings & Payments</span></a>
+                </div> 
+                 <div class="   rounded-lg py-2 px-2  hover:bg-gray-100 w-[100%]  ">
+                    <a href="" class="text-xs text-black text-center">
+                   
+                    <span class="ml-1 text-sm  text-black">Advanced Settings </span></a>
+                </div>  
+        </div> 
+        <div class="ml-[20%] h-[92vh] w-[80%]  py-15  max-lg:ml-0 max-lg:w-full max-lg:px-3">
+            <div class="border-b-1 border-gray-300   flex justify-between">
+                <div class="py-10 max-lg:py-2">
+                   <h2 class="mb-8 font-bold">Account</h2>
+                    <p class="text-2xl mb-2">Choose how you appear and what you see on YouTube</p>
+                    <p class="text-gray-600 text-sm">Signed in as @olaniyimojubaoluwa71090@gmail.com</p> 
+                </div>
+                
+                 
+            </div>
+            <div class="border-b-1 border-gray-300    ">
+                <p class="text-2xl mb-2 font-semibold">Your Youtube Channel</p>
+                <p class="text-gray-600 text-sm">This is your public presence on YouTube. You need a channel to upload your own videos, comment on videos or create playlists.</p>
+                <div class="flex gap-15">
+                    <div>
+                        <h2 class="mt-8 text-sm font-bold">Your channel</h2>
+                    </div>
+                    <div>
+                        <div class="flex pt-10 gap-5">
+                            <div>
+                                <img src="./image/unnamed.jpg" alt="" class="rounded-full w-[70px]">
+                            </div>
+                            
+
+                            <div class="pt-5">
+                                Olaniyi Mojubaoluwa
+                             </div>
+                        </div>
+                        <div>
+                             <h2 class="ml-22 text-sm text-blue-800 font-bold pb-2">Channel status and features</h2>  
+                              <h2 class="ml-22 text-sm text-blue-800 font-bold pb-2">Create a new Channel</h2>  
+                               <h2 class="ml-22 text-sm text-blue-800 font-bold pb-2">View advanced settigns</h2>  
+                        </div>
+                    </div>
+                    </div>
+                    
+             </div>
+             <div class="border-b-1 border-gray-300   ">
+                <div class="py-10">
+                   <h2 class=" font-bold">Your Account</h2> 
+                    <p class="text-gray-600 text-xs">You sign in to YouTube with your Google Account</p> 
+                </div>
+                <div class="flex gap-8  mb-10" >
+                    <div>
+                        <h2 class=" text-sm font-bold">Google Account</h2>
+                    </div>
+                    <div>
+                        <h2 class="  text-sm text-blue-800 font-bold pb-2">View or change your Google Account settings</h2>  
+                        <p class="text-gray-600 text-xs">You will be redirected to your Google Account page</p>
+                    </div>
+                    
+                </div>
+                 <div class="flex gap-8 mb-10" >
+                    <div>
+                        <h2 class=" text-sm font-bold">Family Centre</h2>
+                    </div>
+                    <div>
+                        <h2 class="  text-sm text-blue-800 font-bold pb-2">Manage kids' profiles and features for teens</h2>  
+                        <p class="text-gray-600 text-xs">Tools to connect parents, kids and teens on YouTube</p>
+                    </div>
+                    
+                </div>
+                 <div class="flex gap-8 mb-10" >
+                    <div>
+                        <h2 class=" text-sm font-bold">Membership</h2>
+                    </div>
+                    <div>
+                        <h2 class="  text-sm text-blue-800 flex font-bold pb-2"><span class="text-black">YouTube Premium | </span><span>Manage your Premium membership</span> </h2>  
+                        <p class="text-gray-600 text-xs">YouTube Premium offers uninterrupted music, ad-free videos and more</p>
+                    </div>
+                    
+                </div>
+                 
+            </div>
+        </div>
+    </div>
+
+     
+    
+</main>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+</html>
